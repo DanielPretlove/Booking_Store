@@ -3,15 +3,14 @@
 <form>
     <div class="loginContainer">
         <h2 id="loginHeader">Sign Into Account</h2>
-        <input id="usernameInput" placeholder=" Username or email" />
-        <input id="passwordInput" type="password" placeholder=" Password" />
-        <input id="rememeberMe" type="checkbox" value="Remember me" />
+        <h2 id="usernameTitle">Username</h2>
+        <input id="usernameInput" placeholder="Username" type="email" name="username" />
+        <h2 id="passwordTitle">Password</h2>
+        <input id="passwordInput" type="password" placeholder="Password" />
+        <input id="rememeberMe" type="checkbox" value="rememberMe" />
+        <label for="rememberMe">Remember Me</label>        
         <button id="loginButton" class="">Login</button>
         <button id="registerButton" class="">Register Account</button>
-        <span id="forgotPassword"><a href="#">Forgot password?</a></span>
-        <hr />
-        <h2 id="loginLineBreaker">Or login with</h2>
-        <button id="googleButton">Google</button>
-        <button id="linkedinButton">LinkedIn</button>
+        <span><a href="#" id="forgotPassword">Forgot password?</a></span>
     </div>
 </form> 

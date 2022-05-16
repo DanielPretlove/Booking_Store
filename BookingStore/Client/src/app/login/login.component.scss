@@ -3,10 +3,12 @@
     margin-left: auto;
     margin-right: auto;
     width: 40%;
-    margin-top: 15%;
+    height: 30em;
+    margin-top: 12%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px;
+    border: 1px solid #00a2ff;
 }
 
 .loginContainer:hover {
@@ -14,44 +16,139 @@
 }
 
 #loginHeader {
-    text-align: center;
+    position: relative;
     font-size: 25px;
     font-family: Arial;
     font-weight: 600;
+    text-align: center;
+    top: 3%;
+}
+
+#usernameTitle {
+    position: relative;
+    left: 40px;
+    font-size: 18px;
 }
 
 #usernameInput {
-    
+    position: relative;
+    width: 90%;
+    height: 35px;
+    border: 1px solid #00a2ff;
+    font-family: Arial;
+    border-radius: 5px;
+    left: 5%;
+    bottom: 5px;
+    font-size: 16px;
+    line-height: normal;
+    padding-left: 8px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+#passwordTitle {
+    position: relative;
+    left: 40px;
+    font-size: 18px;
 }
 
 #passwordInput {
-    
-}
+    position: relative;
+    width: 90%;
+    height: 35px;
+    border: 1px solid #00a2ff;
+    font-family: Arial;
+    border-radius: 5px;
+    left: 5%;
+    bottom: 5px;
+    font-size: 16px;
+    line-height: normal;
+    padding-left: 8px;
+    display: block;
 
-#rememeberMe {
-    
+    &:focus {
+        outline: none;
+    }
 }
 
 #loginButton {
+    position: relative;
     cursor: pointer;
+    top: 10px;
+    left: 40%;
+    width: 150px;
+    height: 40px;
+    background-color: #00a2ff;
+    border: none;
+    color: #FFF;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.7s;
+    &:hover, &:focus {
+        border: 1px solid #00a2ff;
+        background-color: white;
+        color: #00a2ff;
+        transition: 0.7s;
+    }
 }
 
 #registerButton {
-    
+    position: relative;
+    cursor: pointer;
+    top: 10px;
+    left: 41%;
+    width: 150px;
+    height: 40px;
+    background-color: gray;
+    border: none;
+    color: #FFF;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.7s;
+
+    &:hover, &:focus {
+        border: 1px solid gray;
+        background-color: white;
+        color: gray;
+        transition: 0.7s;
+    }
+
+
 }
+
+#rememeberMe {
+    position: relative;
+    cursor: pointer;
+    height: 15px;
+    top: 10px;
+    left: 40px;
+}
+
+label[for=rememberMe] {
+    position: relative;
+    left: 2px;
+    font-size: 16px;
+    top: 9px;
+    left: 45px;
+
+}
+
 
 #forgotPassword {
-    
-}
+    position: relative;
+    top: 35%;
+    right: 13%;
+    color: #00a2ff;
+    font-size: 16px;
+    &:visited {
+        color: #00a2ff;
+    }
 
-#loginLineBreaker {
-    
-}
-
-#googleButton {
-    
-}
-
-#linkedinButton {
-    
+    &:hover {
+        color: red;
+    }
 }
