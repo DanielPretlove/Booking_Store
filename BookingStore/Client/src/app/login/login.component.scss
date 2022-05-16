@@ -1,0 +1,57 @@
+.loginContainer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 15%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.loginContainer:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#loginHeader {
+    text-align: center;
+    font-size: 25px;
+    font-family: Arial;
+    font-weight: 600;
+}
+
+#usernameInput {
+    
+}
+
+#passwordInput {
+    
+}
+
+#rememeberMe {
+    
+}
+
+#loginButton {
+    cursor: pointer;
+}
+
+#registerButton {
+    
+}
+
+#forgotPassword {
+    
+}
+
+#loginLineBreaker {
+    
+}
+
+#googleButton {
+    
+}
+
+#linkedinButton {
+    
+}
