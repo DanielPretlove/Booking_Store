@@ -1,16 +1,22 @@
 
 
-<form>
+<div>
     <div class="loginContainer">
         <h2 id="loginHeader">Sign Into Account</h2>
         <h2 id="usernameTitle">Username</h2>
-        <input id="usernameInput" placeholder="Username" type="email" name="username" />
+        <input type="text" id="usernameInput" placeholder="Username" [(ngModel)]="username"/>
         <h2 id="passwordTitle">Password</h2>
-        <input id="passwordInput" type="password" placeholder="Password" />
+        <input id="passwordInput" type="password" placeholder="Password" [(ngModel)]="password"/>
         <input id="rememeberMe" type="checkbox" value="rememberMe" />
         <label for="rememberMe">Remember Me</label>        
-        <button id="loginButton" class="">Login</button>
+        <button id="loginButton" (click)="LoginClick()" type="button">Login</button>
         <button id="registerButton" class="">Register Account</button>
         <span><a href="#" id="forgotPassword">Forgot password?</a></span>
     </div>
-</form> 
+</div> 
+
+<!-- on click new page which is register
+when username and password matches data from login route, basically like 
+ SELECT username, password FROM table WHERE id = id
+log the user in
+-->

@@ -71,3 +71,9 @@ E:\Programming_Tasks\Full-Stack Projects\BookingStore\BookingStore\bin\Debug\net
 E:\Programming_Tasks\Full-Stack Projects\BookingStore\BookingStore\bin\Debug\net6.0\MailKit.dll
 E:\Programming_Tasks\Full-Stack Projects\BookingStore\BookingStore\bin\Debug\net6.0\MimeKit.dll
 E:\Programming_Tasks\Full-Stack Projects\BookingStore\BookingStore\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+E:\Programming_Tasks\Full-Stack Projects\BookingStore\BookingStore\bin\Debug\net6.0\Client\angular.json
+E:\Programming_Tasks\Full-Stack Projects\BookingStore\BookingStore\bin\Debug\net6.0\Client\package-lock.json
+E:\Programming_Tasks\Full-Stack Projects\BookingStore\BookingStore\bin\Debug\net6.0\Client\package.json
+E:\Programming_Tasks\Full-Stack Projects\BookingStore\BookingStore\bin\Debug\net6.0\Client\tsconfig.app.json
+E:\Programming_Tasks\Full-Stack Projects\BookingStore\BookingStore\bin\Debug\net6.0\Client\tsconfig.json
+E:\Programming_Tasks\Full-Stack Projects\BookingStore\BookingStore\bin\Debug\net6.0\Client\tsconfig.spec.json
