@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BookingStore.Entities
+namespace Entities
 {
-    public enum Role
+    public class BookContext
     {
-        Admin, 
-        User
+        
     }
 }

@@ -1,5 +1,7 @@
 import { Component, Directive, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { iif } from 'rxjs';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   username: string = '';
   password: string = '';
-  constructor(private router: Router) { 
+  constructor(private router: Router, private http: HttpClient) { 
 
   }
   
@@ -24,6 +26,13 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.http.get('https://localhost:5000/Accounts').subscribe(Response => {
+      if (Response) {
+        console.log("HELLO")
+      }
+      console.log(Response);
+    });
+
   }
 
 }

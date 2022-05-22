@@ -1,9 +1,6 @@
 using System.Text.Json.Serialization;
-using BookingStore.Authorization;
-using BookingStore.Helpers;
-using BookingStore.Services;
-using BookingStore.Services.Account;
-using BookingStore.Services.Email;
+using BookingStore.Services.Users;
+using Entities;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -14,19 +11,14 @@ var builder = WebApplication.CreateBuilder(args);
     var services = builder.Services;
     var env = builder.Environment;
 
-    services.AddDbContext<AccountContext>();
     services.AddCors();
     services.AddControllers().AddJsonOptions(x => {
         x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
     });
-
+    services.AddScoped<IUserService, UserService>();
+    services.AddDbContext<UserContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("BookingStore")));
     services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
     services.AddSwaggerGen();
-
-    services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
-    services.AddScoped<IJwtUtils, JwtUtils>();
-    services.AddScoped<IAccountService, AccountService>();
-    services.AddScoped<IEmailService, EmailService>();
 }
 
 
@@ -34,12 +26,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
-
-using (var scope = app.Services.CreateScope())
-{
-    var dataContext = scope.ServiceProvider.GetRequiredService<AccountContext>();    
-    dataContext.Database.Migrate();
-}
 {
     app.UseSwagger();
     app.UseSwaggerUI(x => x.SwaggerEndpoint("/swagger/v1/swagger.json", ".NET Sign-up and Verification API"));
@@ -51,12 +37,7 @@ using (var scope = app.Services.CreateScope())
         .AllowAnyHeader()
         .AllowCredentials());
 
-    // global error handler
-    app.UseMiddleware<ErrorHandlerMiddleware>();
-
-    // custom jwt auth middleware
-    app.UseMiddleware<JwtMiddleware>();
-
+    app.UseAuthentication();
     app.MapControllers();
 }
 
